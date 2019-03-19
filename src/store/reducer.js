@@ -7,8 +7,8 @@ const reducer = (state = initialState, action) => {
     case "ADD_CONTACT":
       const newContact = {
         id: Math.random(),
-        name: "Chris",
-        age: Math.floor(Math.random() * 40)
+        name: action.personData.name,
+        age: action.personData.age
       };
 
       return {
